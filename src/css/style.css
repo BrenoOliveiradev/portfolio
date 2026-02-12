@@ -29,6 +29,7 @@ body {
 section {
 
     padding: 10rem 9% 2rem;
+
 }
 
 /* Header */
@@ -59,6 +60,19 @@ section {
 .logo span {
     color: var(--main-color);
 }
+
+.theme-toggle {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: 2rem;
+    transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+    color: var(--main-color);
+}
+
 
 .navbar-list {
     display: flex;
@@ -108,10 +122,6 @@ section {
     justify-content: center;
     align-items: center;
 
-    background-image: var(--hero-bg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 
 }
 
@@ -353,6 +363,10 @@ span {
     background: var(--second-bg-color);
 }
 
+.contact h2 {
+    margin-bottom: 3rem;
+}
+
 .contact-grup {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -470,6 +484,10 @@ span {
         padding: 10rem 3% 2rem;
     }
 
+    .projects {
+        padding-bottom: 7rem;
+    }
+
     .footer {
         padding: 2rem 3%;
     }
@@ -499,12 +517,31 @@ span {
 
     .navbar.active {
         display: block;
+        opacity: 0.9;
+        animation: fadeDown .3s ease;
+    }
+
+    @keyframes fadeDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 0.9;
+            transform: translateY(0);
+        }
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        gap: 0;
     }
 
     .navbar a {
         display: block;
         font-size: 2rem;
-        margin: 3rem 0;
+        margin: 1.5rem 0;
         text-align: center;
     }
 
@@ -513,7 +550,7 @@ span {
     }
 
     .home-img img {
-        width: 70vw;
+        width: 60vw;
     }
 
     .home-content h3 {
@@ -524,5 +561,47 @@ span {
         font-size: 3rem;
     }
 
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-img img {
+        width: 60vw;
+    }
+
+    .projects h2 {
+        margin-bottom: 3rem;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+}
+
+@media (max-width: 617px) {
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 365px) {
+
+    .home-img img {
+        width: 80vw;
+    }
+
+    .about-img img {
+        width: 80vw;
+    }
 
 }

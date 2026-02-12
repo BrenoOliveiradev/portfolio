@@ -54,3 +54,48 @@ navLinks.forEach(link => {
         menuIcon.classList.add('fa-bars');
     });
 });
+
+// Contato
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name');
+    const message = document.getElementById('message');
+    const telephone = '5585991204161';
+
+    const text = `Olá, meu nome é ${name.value}. ${message.value}`
+
+    const msgFormatted = encodeURIComponent(text);
+
+    const url = `https://wa.me/${telephone}?text=${msgFormatted}`;
+
+    window.open(url, '_blank');
+    form.reset();
+
+});
+
+ 
+
+// Scroll reveal
+ ScrollReveal({ 
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+ });
+
+ ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
+ ScrollReveal().reveal('.home-img, .projects-box, .contact form, .contact-img', { origin: 'bottom' });
+ ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
+ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
+
+// Typed.js
+const typed = new Typed('.multiple-text', {
+    strings: ['Desenvolvedor Front-End', 'Desenvolvedor Web', 'Criador de Experiências Digitais'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});

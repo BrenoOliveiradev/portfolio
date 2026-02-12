@@ -33,6 +33,7 @@
                 <li><a href="#about" class="navbar-link">Sobre</a></li>
                 <li><a href="#projects" class="navbar-link">Projetos</a></li>
                 <li><a href="#contact" class="navbar-link">Contato</a></li>
+                
             </ul>
 
         </nav>
@@ -43,7 +44,7 @@
         <div class="home-content">
             <h3>Olá, me chamo</h3>
             <h1>Breno Oliveira</h1>
-            <h3> E sou um <span>Desenvolvedor Front-End</span> </h3>
+            <h3> E sou um <span class="multiple-text"></span> </h3>
             <p>Com uma paixão por criar experiências digitais incríveis e uma habilidade para transformar ideias em
                 realidade.</p>
             <div class="social-media">
@@ -199,44 +200,52 @@
 
     </section>
 
-        <!-- Contact Section -->
-        <section class="contact" id="contact">
-            <h2 class="heading">Entre em <span>Contato</span></h2>
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Entre em <span>Contato</span></h2>
 
-            <div class="contact-grup">
+        <div class="contact-grup">
 
-                <div class="contact-img">
-                    <img src="./src/img/img-contato.png" alt="caricatura de Breno Oliveira">
-                </div>
-
-                <div class="form-area">
-                    <form class="form-contact" id="form">
-                        <div class="grup-form">
-                            <input type="text" placeholder="Nome" class="campo-form">
-                        </div>
-
-                        <div class="grup-form">
-                            <textarea class="campo-form" placeholder="Digite sua mensagem"></textarea>
-                        </div>
-                        <button type="submit" class="btn-form">Enviar Mensagem <i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-text">
-                <p>&copy; 2026 Breno Oliveira. Todos os direitos reservados.</p>
+            <div class="contact-img">
+                <img src="./src/img/contato.png" alt="caricatura de Breno Oliveira">
             </div>
 
-            <div class="footer-iconTop">
-                <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
-            </div>
-        </footer>
+            <div class="form-area">
+                <form class="form-contact" id="form">
+                    <div class="grup-form">
+                        <input type="text" placeholder="Nome" class="campo-form" id="name" required>
+                    </div>
 
-   <script src="./src/js/script.js"></script>
+                    <div class="grup-form">
+                        <textarea class="campo-form" placeholder="Digite sua mensagem" rows="6" id="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-form">Enviar Mensagem <i
+                            class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>&copy; 2026 Breno Oliveira. Todos os direitos reservados.</p>
+        </div>
+
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <!-- custom js -->
+    <script src="./src/js/script.js"></script>
 </body>
 
 </html>
